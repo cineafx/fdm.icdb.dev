@@ -1,0 +1,72 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #bbb;
+  background: url("big.png") no-repeat center center fixed #191919;
+  background-size: auto 100%;
+  animation: slide 5s linear infinite;
+}
+.container {
+  display: inline-block;
+  line-height: 1.25em;
+  font-size: 1.5em;
+  padding: 0.25em 1.25em;
+  margin: 3vh 3vw;
+  background: #e6e6e6e6;
+  color:#191919;
+}
+ul li {
+  list-style: none;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+.tfsup {
+  vertical-align: super;
+  font-size: 0.5em;
+  color: #FF6961;
+}
+.tfsup:after {
+  content: "";
+  background : url("https://cdn.betterttv.net/emote/54fa8f1401e468494b85b537/3x") no-repeat;
+  background-size: 16px;
+  background-position-x: -16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 0.25em;
+}
+a:hover + .tfsup:after {
+  animation: movetf 500ms linear;
+  animation-fill-mode: forwards;
+}
+a:hover {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 3s ease-in-out infinite;
+  background-size: 500% 100%;
+}
+@keyframes movetf {
+  100% {background-position-x: 0;}
+}
+@keyframes rainbow {
+0%,100% { background-position: 0 0; }
+50% { background-position: 100% 0; }
+}
+@keyframes slide {
+  from { background-position: left -925px center; }
+  to { background-position: right -925px center; }
+}
